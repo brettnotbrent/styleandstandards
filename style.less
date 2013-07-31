@@ -407,12 +407,18 @@ h1.pagehead {
 	}
 	
 
-i[name="excel"] { 
+i[name="excel"],
+i[name="table"],
+i[name="graph"],
+i[name="delete"],
+i[name="reject"],
+i[name="approve"],
+i[name="download"],
+i[name="upload"],
+i[name="refresh"],
+i[name="revert"] { 
 	float: right;
-	border-top: none;
-	border-bottom: none;
-	height: 100%;
-	background-position: -90px -87px;
+	margin: 3px 10px 0 0;
 }
 
 menu.genericcontroller,
@@ -420,7 +426,7 @@ menu.dropdown {
 	float: right;
 	display: block;
 	min-width: 30px;
-	min-height: 38px;
+	min-height: 30px;
 	margin: 0;
 	padding: 0;
 	position: relative;
@@ -428,10 +434,8 @@ menu.dropdown {
 
 	i[name="controlexpand"] { 
 		float: none;
-		border-top: none;
-		border-bottom: none;
-		height: 38px;
-		background-position: 0 -27px;
+		.standardborder();
+		height: 30px;
 	}
 
 	&:hover { background-color: @lightgray; }
@@ -482,7 +486,7 @@ menu.dropdown {
 
 menu.dropdown {
 		padding: 0 0 0 10px;
-		height: 36px;
+		height: 30px;
 		.standardborder(@bordertop: none, @borderright: none, @borderbottom: none);
 
 	label {
@@ -519,40 +523,15 @@ menu.dropdown {
 	}
 }
 
-i[name="table"],
-i[name="graph"],
-i[name="delete"],
-i[name="reject"],
-i[name="approve"],
-i[name="download"],
-i[name="upload"],
-i[name="refresh"],
-i[name="revert"] { 
-	float: right;
-	border-top: 0;
-	border-bottom: 0;
-	border-right: 0;
-	height: 100%;
-}
-
-i[name="table"] { 		background-position: -390px -57px; border-left: none; }
-i[name="graph"] { 		background-position: -420px -57px; }
-i[name="upload"] {	 	background-position: -180px 3px;		}
-i[name="download"] {	background-position: -210px 3px;		}
-i[name="refresh"] {		background-position: -90px -27px;	}
-i[name="revert"] {		background-position: -120px -27px;	}
 
 .selected { background-color: @lightgray; }
 
-i[name="delete"] { background-position: 0 -87px; }
-i[name="reject"] { background-position: -30px -87px; }
-i[name="approve"] { background-position: -60px -87px; }
 
 button.generic { 
 	float: right; 
-	margin: 0;
-	.standardborder(@bordertop: none, @borderright: none, @borderbottom:	 none);
-	height: 38px;
+	margin: 3px 10px 0 0;
+	.standardborder();
+	height: 30px;
 	background-color: inherit;
 	width: auto;
 	padding: 0 10px;
